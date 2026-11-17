@@ -241,8 +241,6 @@ struct SatchelTray: View {
             .frame(minHeight: 44)
             .background(RoundedRectangle(cornerRadius: Theme.radiusS).fill(on ? kind.tint : pal.slab))
             .overlay(RoundedRectangle(cornerRadius: Theme.radiusS).stroke(on ? Theme.goldSoft : pal.slabLight, lineWidth: 1))
-            .scaleEffect(on ? 1.06 : 1)
-            .animation(.spring(response: 0.25, dampingFraction: 0.6), value: on)
         }
         .buttonStyle(.plain)
         .accessibilityIdentifier("stone.\(kind.rawValue)")

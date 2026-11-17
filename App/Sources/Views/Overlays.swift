@@ -23,19 +23,26 @@ struct PhaseOverlay: View {
 struct Veil<Content: View>: View {
     @ViewBuilder let content: Content
 
+    private var panel: some View {
+        content
+            .padding(.horizontal, 16)
+            .padding(.vertical, 20)
+            .frame(maxWidth: Theme.maxWidth)
+            .frame(maxWidth: .infinity)
+    }
+
     var body: some View {
         ZStack {
             Color.black.opacity(0.88).ignoresSafeArea()
-            GeometryReader { geo in
-                ScrollView {
-                    // 盤の上の見出しと重ならないよう、幕の中で上下の真ん中に置く
-                    content
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 20)
-                        .frame(maxWidth: Theme.maxWidth)
-                        .frame(maxWidth: .infinity, minHeight: geo.size.height)
+            // 入るなら上下の真ん中、入らなければスクロール（盤の上の見出しと重ならない）
+            ViewThatFits(in: .vertical) {
+                VStack {
+                    Spacer(minLength: 0)
+                    panel
+                    Spacer(minLength: 0)
                 }
-                .scrollBounceBehavior(.basedOnSize)
+                ScrollView { panel }
+                    .scrollBounceBehavior(.basedOnSize)
             }
         }
         .transition(.opacity)
@@ -85,9 +92,10 @@ struct RewardPanel: View {
                 }
                 .buttonStyle(CellPressStyle())
                 .accessibilityIdentifier("main.reward.\(i)")
-                .rotation3DEffect(.degrees(shown || model.reduceMotion ? 0 : 80), axis: (x: 1, y: 0, z: 0))
-                .opacity(shown || model.reduceMotion ? 1 : 0)
-                .animation(.spring(response: 0.45, dampingFraction: 0.75).delay(Double(i) * 0.12), value: shown)
+                // 札が下から順にせり上がる（押せる範囲が崩れないよう、回転は使わない）
+                .offset(y: shown || model.reduceMotion ? 0 : 28)
+                .opacity(shown || model.reduceMotion ? 1 : 0.2)
+                .animation(.spring(response: 0.4, dampingFraction: 0.78).delay(Double(i) * 0.1), value: shown)
             }
             Text(trf("次は地下 %d 階・%@", "Next: Floor %d · %@", run.floor + 1, Zone.of(floor: run.floor + 1).name))
                 .font(Theme.label(12, weight: .regular))
