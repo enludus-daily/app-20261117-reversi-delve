@@ -1,21 +1,21 @@
 {
   "_doc": "App Store Connect に API で入れる情報（.github/workflows/asc.yml の metadata が読む）。文字数：name・subtitle 30、keywords 100（カンマ区切り）、promotionalText 170、description 4000。カテゴリの ID は EDUCATION・PRODUCTIVITY・UTILITIES・LIFESTYLE・HEALTH_AND_FITNESS など。審査への提出と App プライバシーの申告は本人が行う。",
   "locale": "ja",
-  "name": "",
-  "subtitle": "",
-  "primaryCategory": "",
-  "secondaryCategory": "",
-  "supportUrl": "https://github.com/enludus-daily/__REPO__/issues",
-  "privacyPolicyUrl": "https://github.com/enludus-daily/__REPO__/blob/main/PRIVACY.md",
-  "keywords": "",
-  "promotionalText": "",
-  "description": "",
-  "whatToTest": "",
+  "name": "迷宮リバーシ",
+  "subtitle": "宝石の石で、地下へ下りる",
+  "primaryCategory": "GAMES",
+  "secondaryCategory": "ENTERTAINMENT",
+  "supportUrl": "https://github.com/enludus-daily/app-20261117-reversi-delve/issues",
+  "privacyPolicyUrl": "https://github.com/enludus-daily/app-20261117-reversi-delve/blob/main/PRIVACY.md",
+  "keywords": "リバーシ,ローグライク,ボードゲーム,パズル,迷宮,ダンジョン,一人用,宝石,今日の迷宮,対局,CPU,思考ゲーム",
+  "promotionalText": "いつものリバーシで、迷宮を1階ずつ下りる。勝つたびに炎・錨・時の石や遺物を3つから選び、毎回変わる盤と番人に挑む。今日の迷宮は毎日同じ盤。",
+  "description": "リバーシなのに、迷宮を下りていくローグライク。\n\n迷宮リバーシは、1 階ごとに 1 局のリバーシを打ち、勝てば下の階へ進む一人用のゲームです。階ごとに盤の形（穴・金のはめこみ）と、打ち方の違う番人が変わります。勝つたびに、特殊な宝石の石か遺物を 3 つから 1 つ選んで強くなり、灯が尽きるまで、どこまで深く下りられるかを競います。\n\n■ 宝石の石\n・錨の石：置いたら、もう返されない\n・炎の石：置いた横の列の相手の石を、すべて返す\n・時の石：挟まなくても置け、2 手後にまわりの石を返す\n・金の石：終わったとき 3 つぶんに数える\n\n■ 遺物（下りるあいだずっと効く）\n隅の礎石・光のプリズム・石袋・つるはし・金の鉱脈・灯籠・残り火\n\n■ 階の帯と番人\n苔の回廊 → 水晶の洞 → 溶岩の炉 → 星の底。帯ごとに盤の石材と灯りの色が変わり、番人は「多く返す」「隅を好む」「少しだけ返す」「1 手先を読む」「2 手先を読む」など、決まった打ち方で挑んできます。\n\n■ 毎日開く理由\n・今日の迷宮：だれが潜っても同じ盤と同じ報酬。1 日 1 回、最深を残す\n・図鑑：見つけた宝石・遺物・倒した番人\n・探索の記録と、深さの共有カード\n\n■ Pro（買い切り）\n・10 階より深い階（星の底と、その先の深淵）\n・こだま・幽霊・彗星の石が報酬に出る\n・探索の記録すべて\n\n1〜9 階・今日の迷宮・図鑑は無料です。記録はすべて端末の中だけ。ログイン・広告・解析はありません。",
+  "whatToTest": "案内 3 ページ → ホームの「今日の迷宮へ」で 1 階。盤のマスを押して置く（置ける所に印）。下の石の袋から炎の石などを選んでから置くと特殊な石になる。「灯りで照らす」でヒント。勝つと 3 つから 1 つ選んで次の階。負けると灯が 1 つ消えてやり直し。左上の中断から引き返すと、探索のまとめと共有。図鑑・記録・設定の Pro と購入の復元も確かめてください。",
   "en-US": {
-    "name": "",
-    "subtitle": "",
-    "keywords": "",
-    "promotionalText": "",
-    "description": ""
+    "name": "Reversi Delve",
+    "subtitle": "Flip gem stones, go deeper",
+    "keywords": "reversi,roguelike,roguelite,board game,strategy,puzzle,dungeon,gems,daily,offline,single player,ai",
+    "promotionalText": "Classic reversi, one dungeon floor at a time. Win to pick a Flame, Anchor or Hourglass gem or a relic, then face a new board and warden. Daily dungeon included.",
+    "description": "Reversi — as a roguelike dungeon crawl.\n\nReversi Delve is a single-player game where every floor is one game of reversi. Win and you go down a floor. Each floor brings a new board (pits and gold inlays) and a new warden with its own play style. After every win, choose one of three magic gems or relics, then see how deep you can go before your torches run out.\n\nMAGIC GEMS\n• Anchor: can never be flipped\n• Flame: flips every rival stone in its row\n• Hourglass: place anywhere; two turns later it flips its neighbors\n• Gold: counts as three at the end\n\nRELICS THAT LAST THE WHOLE DELVE\nCornerstone, Light Prism, Stone Pouch, Pickaxe, Gold Vein, Lantern, Embers\n\nZONES AND WARDENS\nMossy Halls → Crystal Grotto → Magma Forge → Starfloor. Each zone changes the stone and the light. Wardens follow simple, fixed styles: greedy, corner-loving, stingy, one move ahead, two moves ahead.\n\nREASONS TO COME BACK\n• Today's Dungeon: the same boards and rewards for everyone, once a day\n• Codex of gems, relics and beaten wardens\n• Delve log and a shareable depth card\n\nPRO (ONE-TIME PURCHASE)\n• Floors past 10: the Starfloor and the abyss below\n• Echo, Ghost and Comet stones join the rewards\n• Your full delve log\n\nFloors 1–9, Today's Dungeon and the Codex are free. Everything stays on your device. No login, ads or analytics."
   }
 }

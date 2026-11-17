@@ -3,15 +3,23 @@
   "products": [
     {
       "type": "NON_CONSUMABLE",
-      "productId": "com.enludus.daily.template.pro",
-      "referenceName": "Pro",
+      "productId": "com.enludus.daily.012.pro",
+      "referenceName": "Reversi Delve Pro",
       "price": 480,
       "familySharable": true,
-      "reviewNote": "Pro を買うと、すべての〇〇と詳しい振り返りが使えます。課金の画面は設定 > Pro から開けます。",
+      "reviewNote": "Pro を買うと、10 階より深い階（星の底・深淵）、Pro の石 3 種（こだま・幽霊・彗星）が報酬に出ること、探索の記録すべてが使えます。課金の画面はホームの「星の底へ（Pro）」か、設定 > Pro でできること から開けます。",
       "reviewScreenshot": "docs/iap/paywall.png",
       "localizations": [
-        {"locale": "ja", "name": "Pro", "description": "すべての〇〇と詳しい振り返り"},
-        {"locale": "en-US", "name": "Pro", "description": "All 〇〇 and detailed reviews"}
+        {
+          "locale": "ja",
+          "name": "迷宮リバーシ Pro",
+          "description": "10 階より深い階・魔法の石 3 種・記録すべて"
+        },
+        {
+          "locale": "en-US",
+          "name": "Reversi Delve Pro",
+          "description": "Deeper floors, 3 magic stones, full log"
+        }
       ]
     }
   ]

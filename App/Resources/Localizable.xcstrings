@@ -1,42 +1,1806 @@
 {
   "sourceLanguage": "ja",
   "strings": {
-    "はじめる": {
+    "%@ で Pro にする": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start"
+            "value": "Get Pro for %@"
           }
         }
       }
     },
-    "リセット": {
+    "%@、残り %d": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reset"
+            "value": "%@, %d left"
           }
         }
       }
     },
-    "1 たす": {
+    "%d 個の石を返した": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add 1"
+            "value": "%d stones flipped"
           }
         }
       }
     },
-    "回数 %lld": {
+    "%d 日続けて潜っている": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Count %lld"
+            "value": "%d-day streak"
+          }
+        }
+      }
+    },
+    "%d 返し": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d flips"
+          }
+        }
+      }
+    },
+    "10 点差以上で勝つと、石が 1 つ増える。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Win by 10+ to gain a stone."
+          }
+        }
+      }
+    },
+    "10 階〜": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floors 10+"
+          }
+        }
+      }
+    },
+    "10 階より深い階・魔法の石 3 種・探索の記録すべて": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floors past 10, three magic stones, full delve log"
+          }
+        }
+      }
+    },
+    "1〜3 階": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floors 1–3"
+          }
+        }
+      }
+    },
+    "4〜6 階": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floors 4–6"
+          }
+        }
+      }
+    },
+    "7〜9 階": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floors 7–9"
+          }
+        }
+      }
+    },
+    "9 階より深く": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Past Floor 9"
+          }
+        }
+      }
+    },
+    "Pro で 10 階より深く。番人 4 人と、こだま・幽霊・彗星の石。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Go past Floor 10 with Pro: four more wardens and the Echo, Ghost and Comet stones."
+          }
+        }
+      }
+    },
+    "Pro でできること": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What Pro adds"
+          }
+        }
+      }
+    },
+    "Pro を使っています。ありがとう。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You have Pro. Thank you."
+          }
+        }
+      }
+    },
+    "Pro を復元しました。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro restored."
+          }
+        }
+      }
+    },
+    "あなた %d 点、番人 %d 点": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You %d, warden %d"
+          }
+        }
+      }
+    },
+    "あなたの石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "your stone"
+          }
+        }
+      }
+    },
+    "あなたの隅の石は +2 点。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your corner stones score +2."
+          }
+        }
+      }
+    },
+    "あなたはパス": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You pass"
+          }
+        }
+      }
+    },
+    "ありがとう。星の底が開いた。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thank you. The Starfloor is open."
+          }
+        }
+      }
+    },
+    "いつものリバーシ。1 階 1 局で、勝てば下の階へ。階ごとに盤の形と番人が変わる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Classic reversi rules. Win a game to go down a floor. Every floor brings a new board and a new warden."
+          }
+        }
+      }
+    },
+    "いま %d 個": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You have %d"
+          }
+        }
+      }
+    },
+    "いまは購入できません。通信できる所で、あとでもう一度開いてください。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purchases aren't available right now. Please try again later with a connection."
+          }
+        }
+      }
+    },
+    "ここで引き返す": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Head back to the surface"
+          }
+        }
+      }
+    },
+    "こだまの石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Echo Stone"
+          }
+        }
+      }
+    },
+    "こだま（もう 1 手）・幽霊（穴の上に置ける）・彗星（縦一列を返す）が、階の報酬に出る。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Echo (extra turn), Ghost (place over pits) and Comet (burn a column) join the rewards."
+          }
+        }
+      }
+    },
+    "この 7 日の今日の迷宮": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's Dungeon, last 7 days"
+          }
+        }
+      }
+    },
+    "この 7 日の今日の迷宮の深さ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Depth of Today's Dungeon over the last 7 days"
+          }
+        }
+      }
+    },
+    "この下に、星の底が続いている": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Below lies the Starfloor"
+          }
+        }
+      }
+    },
+    "この階の番人": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warden"
+          }
+        }
+      }
+    },
+    "これまでの探索": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Past delves"
+          }
+        }
+      }
+    },
+    "だれが潜っても同じ盤と同じ宝石。1 日 1 回、どこまで下りられるか。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Same boards and gems for everyone. One dive a day — how deep can you go?"
+          }
+        }
+      }
+    },
+    "つづける": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep going"
+          }
+        }
+      }
+    },
+    "つるはし": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pickaxe"
+          }
+        }
+      }
+    },
+    "どこまで下りられる？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How deep can you go?"
+          }
+        }
+      }
+    },
+    "ひとつ持って、下へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take one, then go deeper"
+          }
+        }
+      }
+    },
+    "ひと休み": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paused"
+          }
+        }
+      }
+    },
+    "ふつうの石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plain stone"
+          }
+        }
+      }
+    },
+    "ふつうの石で打つ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Playing a plain stone"
+          }
+        }
+      }
+    },
+    "ほか %d 回の探索は Pro で": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d more delves with Pro"
+          }
+        }
+      }
+    },
+    "まだ探索の記録がない": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No delves yet"
+          }
+        }
+      }
+    },
+    "まだ見つけていない。深い階で出会える。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not found yet. Look deeper."
+          }
+        }
+      }
+    },
+    "もう一度読み込む": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try again"
+          }
+        }
+      }
+    },
+    "ヒントが何度でも使える。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlimited hints."
+          }
+        }
+      }
+    },
+    "ホームの「今日の迷宮へ」から、最初の 1 回を。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start with Today's dive on the home screen."
+          }
+        }
+      }
+    },
+    "ルール：リバーシ（挟んだ石を返す）。番人の打ち方は階ごとに決まった簡単な規則です。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rules: reversi (sandwich to flip). Each warden follows one simple, fixed play style."
+          }
+        }
+      }
+    },
+    "中断": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        }
+      }
+    },
+    "今日から灯をともそう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light your first torch today"
+          }
+        }
+      }
+    },
+    "今日の最深。また明日、新しい迷宮が開く。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's depth. A new dungeon opens tomorrow."
+          }
+        }
+      }
+    },
+    "今日の迷宮": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's Dungeon"
+          }
+        }
+      }
+    },
+    "今日の迷宮へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's dive"
+          }
+        }
+      }
+    },
+    "使った宝石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gems used"
+          }
+        }
+      }
+    },
+    "倒した": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beaten"
+          }
+        }
+      }
+    },
+    "倒した番人": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wardens beaten"
+          }
+        }
+      }
+    },
+    "倒した番人 %d / %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wardens beaten %d / %d"
+          }
+        }
+      }
+    },
+    "値段を読み込んでいます…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading the price…"
+          }
+        }
+      }
+    },
+    "光のプリズム": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light Prism"
+          }
+        }
+      }
+    },
+    "効果音": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sound effects"
+          }
+        }
+      }
+    },
+    "勝つたびに、宝石か遺物を 3 つから 1 つ。炎の石は横一列を、錨の石は返されない。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "After each win, pick one of three gems or relics. Flame burns a whole row. Anchor never flips."
+          }
+        }
+      }
+    },
+    "同じ階を、新しい盤でやり直せる。袋の石と遺物はそのまま。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retry this floor on a new board. You keep your gems and relics."
+          }
+        }
+      }
+    },
+    "図鑑": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Codex"
+          }
+        }
+      }
+    },
+    "地上で休む（あとで続きから）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rest on the surface (resume later)"
+          }
+        }
+      }
+    },
+    "地上へもどる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back to the surface"
+          }
+        }
+      }
+    },
+    "地下 %d 階": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floor %d"
+          }
+        }
+      }
+    },
+    "地下 %d 階。最深 %d 階": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floor %d. Deepest %d"
+          }
+        }
+      }
+    },
+    "地下 %d 階で敗れた": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Defeated on Floor %d"
+          }
+        }
+      }
+    },
+    "地下 %d 階まで下りた": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You reached Floor %d"
+          }
+        }
+      }
+    },
+    "地下 %d 階を抜けた": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floor %d cleared"
+          }
+        }
+      }
+    },
+    "地下 %d 階・%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Floor %d · %@"
+          }
+        }
+      }
+    },
+    "宝石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gems"
+          }
+        }
+      }
+    },
+    "宝石には、力がある": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Every gem has a power"
+          }
+        }
+      }
+    },
+    "幽霊の石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ghost Stone"
+          }
+        }
+      }
+    },
+    "引き返して、探索を終える": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn back and end the delve"
+          }
+        }
+      }
+    },
+    "彗星の石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comet Stone"
+          }
+        }
+      }
+    },
+    "復元できる購入は見つかりませんでした。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No purchases to restore."
+          }
+        }
+      }
+    },
+    "承認を待っています。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for approval."
+          }
+        }
+      }
+    },
+    "持ち帰った遺物": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relics"
+          }
+        }
+      }
+    },
+    "持っている遺物": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your relics"
+          }
+        }
+      }
+    },
+    "挟まなくても置ける。2 手後、まわりの石を返す。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Place anywhere. Two turns later, it flips its neighbors."
+          }
+        }
+      }
+    },
+    "挟んで返す、いつもの石。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The usual: sandwich to flip."
+          }
+        }
+      }
+    },
+    "挟んで返す。石は宝石。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sandwich to flip. Stones are gems."
+          }
+        }
+      }
+    },
+    "振動": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haptics"
+          }
+        }
+      }
+    },
+    "探索": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delves"
+          }
+        }
+      }
+    },
+    "探索のおわり": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The delve is over"
+          }
+        }
+      }
+    },
+    "探索の記録": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delve Log"
+          }
+        }
+      }
+    },
+    "探索の記録すべて": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your full delve log"
+          }
+        }
+      }
+    },
+    "星の底": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starfloor"
+          }
+        }
+      }
+    },
+    "星の底へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To the Starfloor"
+          }
+        }
+      }
+    },
+    "星の底へ（Pro）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Down to the Starfloor (Pro)"
+          }
+        }
+      }
+    },
+    "星の底をのぞく": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See the Starfloor"
+          }
+        }
+      }
+    },
+    "星の底（10〜12 階）の番人 3 人と、その先に続く深淵。最深の記録に終わりがなくなる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The Starfloor (Floors 10–12), three more wardens, and an abyss with no bottom."
+          }
+        }
+      }
+    },
+    "時の石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hourglass Stone"
+          }
+        }
+      }
+    },
+    "最深": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deepest"
+          }
+        }
+      }
+    },
+    "最深の記録": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deepest"
+          }
+        }
+      }
+    },
+    "最深の記録を更新": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New depth record"
+          }
+        }
+      }
+    },
+    "核の遊び（1〜9 階・今日の迷宮・図鑑）は、ずっと無料です。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The core game — Floors 1–9, Today's Dungeon and the Codex — stays free."
+          }
+        }
+      }
+    },
+    "案内をもう一度見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show the intro again"
+          }
+        }
+      }
+    },
+    "次は地下 %d 階・%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next: Floor %d · %@"
+          }
+        }
+      }
+    },
+    "次へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next"
+          }
+        }
+      }
+    },
+    "残り火": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Embers"
+          }
+        }
+      }
+    },
+    "水晶の洞": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crystal Grotto"
+          }
+        }
+      }
+    },
+    "深さを共有": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share your depth"
+          }
+        }
+      }
+    },
+    "溶岩の炉": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Magma Forge"
+          }
+        }
+      }
+    },
+    "溶岩の炉を抜けた": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You crossed the Magma Forge"
+          }
+        }
+      }
+    },
+    "灯": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Torch"
+          }
+        }
+      }
+    },
+    "灯 %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Torches %d"
+          }
+        }
+      }
+    },
+    "灯がひとつ消えた。残り %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A torch went out. %d left"
+          }
+        }
+      }
+    },
+    "灯が尽きるまで、下へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Go down until your torches run out"
+          }
+        }
+      }
+    },
+    "灯りで照らす（ヒント）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light the way (hint)"
+          }
+        }
+      }
+    },
+    "灯をともして、やり直す": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light a torch and retry"
+          }
+        }
+      }
+    },
+    "灯をひとつ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One more torch"
+          }
+        }
+      }
+    },
+    "灯籠": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lantern"
+          }
+        }
+      }
+    },
+    "炎の石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flame Stone"
+          }
+        }
+      }
+    },
+    "無料は最近の 5 回まで。Pro はすべての探索と持ち帰った遺物を残す。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free keeps your last 5 delves. Pro keeps every delve and its relics."
+          }
+        }
+      }
+    },
+    "画像を共有": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share image"
+          }
+        }
+      }
+    },
+    "番人": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wardens"
+          }
+        }
+      }
+    },
+    "番人の番…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warden's turn…"
+          }
+        }
+      }
+    },
+    "番人の石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "warden's stone"
+          }
+        }
+      }
+    },
+    "番人はパス": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The warden passes"
+          }
+        }
+      }
+    },
+    "盤の穴が少なくなる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fewer pits on every board."
+          }
+        }
+      }
+    },
+    "石の袋": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Satchel"
+          }
+        }
+      }
+    },
+    "石を宝石に。地下へ下りる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your stones are gems. Go down."
+          }
+        }
+      }
+    },
+    "石袋": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stone Pouch"
+          }
+        }
+      }
+    },
+    "穴": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pit"
+          }
+        }
+      }
+    },
+    "穴の上にも置ける。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can be placed over a pit."
+          }
+        }
+      }
+    },
+    "終わったとき 3 つぶんに数える。返されると相手のもの。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Counts as 3 at the end, for whoever holds it."
+          }
+        }
+      }
+    },
+    "続きから・地下 %d 階": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resume · Floor %d"
+          }
+        }
+      }
+    },
+    "続けた日": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Streak"
+          }
+        }
+      }
+    },
+    "置いたあと、もう 1 手打てる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take another turn right away."
+          }
+        }
+      }
+    },
+    "置いたら、もう返されない。隅や辺で強い。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Once placed, it can never be flipped."
+          }
+        }
+      }
+    },
+    "置いた横の列の相手の石を、すべて返す。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flips every rival stone in its row."
+          }
+        }
+      }
+    },
+    "置いた縦の列の相手の石を、すべて返す。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flips every rival stone in its column."
+          }
+        }
+      }
+    },
+    "置ける": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "playable"
+          }
+        }
+      }
+    },
+    "置ける所がありません": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No place to move"
+          }
+        }
+      }
+    },
+    "自由な探索": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free dive"
+          }
+        }
+      }
+    },
+    "自由に潜る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free dive"
+          }
+        }
+      }
+    },
+    "苔の回廊": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mossy Halls"
+          }
+        }
+      }
+    },
+    "袋は空。階を抜けると宝石がもらえる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empty. Clear floors to find gems."
+          }
+        }
+      }
+    },
+    "見つけた宝石 %d / %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gems found %d / %d"
+          }
+        }
+      }
+    },
+    "見つけた遺物 %d / %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relics found %d / %d"
+          }
+        }
+      }
+    },
+    "記録": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Records"
+          }
+        }
+      }
+    },
+    "記録はこの端末の中だけに残ります。ログイン・広告・解析はありません。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your records stay on this device. No login, ads or analytics."
+          }
+        }
+      }
+    },
+    "設定": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "負けても、同じ階をもう一度やり直せる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lose a floor, and you can try it again."
+          }
+        }
+      }
+    },
+    "負けると灯がひとつ消える。今日の迷宮は、だれが潜っても同じ盤。記録はこの端末の中だけ。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lose and a torch goes out. Today's Dungeon is the same for everyone. Your records stay on this device."
+          }
+        }
+      }
+    },
+    "買い切り。いちど買えば、ずっと。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One-time purchase. Yours for good."
+          }
+        }
+      }
+    },
+    "購入できませんでした。時間をおいて、もう一度。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The purchase didn't go through. Please try again later."
+          }
+        }
+      }
+    },
+    "購入を復元": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore purchases"
+          }
+        }
+      }
+    },
+    "返した石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stones flipped"
+          }
+        }
+      }
+    },
+    "迷宮の入口へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To the entrance"
+          }
+        }
+      }
+    },
+    "迷宮リバーシ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reversi Delve"
+          }
+        }
+      }
+    },
+    "迷宮リバーシ Pro": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reversi Delve Pro"
+          }
+        }
+      }
+    },
+    "遺物": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relics"
+          }
+        }
+      }
+    },
+    "金のはめこみが増える。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "More gold inlays on every board."
+          }
+        }
+      }
+    },
+    "金のはめこみの上の石が ×3 点。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stones on gold inlays score ×3."
+          }
+        }
+      }
+    },
+    "金の石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gold Stone"
+          }
+        }
+      }
+    },
+    "金の鉱脈": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gold Vein"
+          }
+        }
+      }
+    },
+    "錨の石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anchor Stone"
+          }
+        }
+      }
+    },
+    "閉じる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "隅の礎石": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cornerstone"
+          }
+        }
+      }
+    },
+    "階の始めに、持っている石が 1 つ増える。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gain one of your stones each floor."
+          }
+        }
+      }
+    },
+    "階を抜けたときに、選べることがある。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sometimes offered after a floor."
+          }
+        }
+      }
+    },
+    "魔法の石 3 種": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Three magic stones"
           }
         }
       }

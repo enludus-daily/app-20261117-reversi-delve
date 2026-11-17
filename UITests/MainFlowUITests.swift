@@ -7,14 +7,41 @@ import XCTest
 
 /// その日のアプリの主な流れ。
 enum MainFlow {
-    /// 起動引数（見本のデータで開くなど。保存されたデータを壊さないもの）
-    static let launchArguments: [String] = []
+    /// 起動引数（初めての起動。今日の迷宮の 1 階は見本の盤で始まる。保存されたデータを壊さないよう記録を消してから始める）
+    static let launchArguments: [String] = ["-uiTestFresh"]
 
     /// 1 操作ずつ。各操作のあとに撮る。
+    /// 3 ページの案内 → 今日の迷宮 → 炎の石を選ぶ → ヒントの隅に置く（横一列が焼ける）→ どちらも置けずに階を抜ける
+    /// → 3 つから選ぶ → 2 階 → 中断 → 引き返す → まとめ → 共有
+    /// → 地上へ（最初の探索のあとだけ Pro の案内）→ 図鑑 → 記録
     static let steps: [Step] = [
-        .tap("main.increment"),
-        .tap("main.increment"),
-        .tap("main.reset"),
+        // 起動直後は遅いランナーで描画が追いつかないことがある
+        .wait(1.5),
+        .tap("main.next"),
+        .tap("main.next"),
+        .tap("main.start"),
+        .tap("main.daily"),
+        // 階の名前の札が消えるのを待つ
+        .wait(1.5),
+        .tap("stone.flame"),
+        .tap("main.hint"),
+        .tap("hint.cell"),
+        // 石が返る → 番人はパス → あなたもパス → 階を抜ける
+        .wait(4.5),
+        .tap("main.reward.0"),
+        .wait(1.5),
+        .tap("main.menu"),
+        .tap("main.retreat"),
+        .tap("main.share"),
+        .tap("main.closeShare"),
+        .wait(1.5),
+        .tap("main.home"),
+        .wait(1.5),
+        .tap("main.closePaywall"),
+        .tap("main.codex"),
+        .tap("main.closeCodex"),
+        .tap("main.records"),
+        .tap("main.closeRecords"),
     ]
 }
 
