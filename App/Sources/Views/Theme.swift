@@ -23,6 +23,9 @@ enum Theme {
     static let obsidianRim = Color(hex: 0x0D0B13)
     static let obsidianSheen = Color(hex: 0x9A8FCB)
 
+    // 灯（どの帯でも同じ琥珀の炎）
+    static let torch = Color(hex: 0xEE9C3E)
+
     // 失敗・危険（小さな印だけ）
     static let danger = Color(hex: 0xE0584A)
 

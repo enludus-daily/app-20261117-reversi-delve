@@ -25,14 +25,18 @@ struct Veil<Content: View>: View {
 
     var body: some View {
         ZStack {
-            Color.black.opacity(0.72).ignoresSafeArea()
-            ScrollView {
-                content
-                    .padding(16)
-                    .frame(maxWidth: Theme.maxWidth)
-                    .frame(maxWidth: .infinity)
+            Color.black.opacity(0.88).ignoresSafeArea()
+            GeometryReader { geo in
+                ScrollView {
+                    // 盤の上の見出しと重ならないよう、幕の中で上下の真ん中に置く
+                    content
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 20)
+                        .frame(maxWidth: Theme.maxWidth)
+                        .frame(maxWidth: .infinity, minHeight: geo.size.height)
+                }
+                .scrollBounceBehavior(.basedOnSize)
             }
-            .scrollBounceBehavior(.basedOnSize)
         }
         .transition(.opacity)
     }
@@ -143,9 +147,9 @@ struct RuneCard: View {
             }
         case .torch:
             FlameShape()
-                .fill(LinearGradient(colors: [Theme.goldSoft, palette.glow], startPoint: .top, endPoint: .bottom))
+                .fill(LinearGradient(colors: [Theme.goldSoft, Theme.torch], startPoint: .top, endPoint: .bottom))
                 .frame(width: 26, height: 38)
-                .shadow(color: palette.glow, radius: 8)
+                .shadow(color: Theme.torch, radius: 8)
         }
     }
 }

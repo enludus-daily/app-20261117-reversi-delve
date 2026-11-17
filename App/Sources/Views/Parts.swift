@@ -126,9 +126,11 @@ struct TorchRow: View {
     let lit: Int
     var total: Int = Dungeon.startTorches
     var size: CGFloat = 14
-    var glow: Color = Theme.gold
+    var glow: Color = Theme.torch
 
     var body: some View {
+        // 灯はどの帯でも琥珀の炎（水晶の洞の水色で、しずくに見えないように）
+        let glow = Theme.torch
         HStack(spacing: size * 0.35) {
             ForEach(0..<max(total, lit), id: \.self) { i in
                 FlameShape()

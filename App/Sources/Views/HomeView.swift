@@ -52,6 +52,8 @@ private struct TopBar: View {
                 Text(tr("迷宮リバーシ", "Reversi Delve"))
                     .font(Theme.carved(26))
                     .foregroundStyle(Theme.text)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
                 Text(tr("石を宝石に。地下へ下りる。", "Your stones are gems. Go down."))
                     .font(Theme.label(12, weight: .regular))
                     .foregroundStyle(Theme.textSoft)

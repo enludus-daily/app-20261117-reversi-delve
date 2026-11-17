@@ -346,7 +346,10 @@ struct PaywallView: View {
                 Text(tr("買い切り。いちど買えば、ずっと。", "One-time purchase. Yours for good."))
                     .font(Theme.label(13, weight: .regular)).foregroundStyle(Theme.textSoft)
             }
-            feature(pal, icon: AnyView(DepthMap(current: 11, deepest: 11, limit: 12, showsLock: false, compact: true).frame(width: 120).clipped()),
+            feature(pal, icon: AnyView(VStack(spacing: 0) {
+                Text("B10+").font(Theme.carved(30)).foregroundStyle(LinearGradient(colors: [pal.glowSoft, pal.glow], startPoint: .top, endPoint: .bottom))
+                Text(Zone.star.name).font(Theme.label(11)).foregroundStyle(pal.vein)
+            }),
                     title: tr("9 階より深く", "Past Floor 9"),
                     detail: tr("星の底（10〜12 階）の番人 3 人と、その先に続く深淵。最深の記録に終わりがなくなる。", "The Starfloor (Floors 10–12), three more wardens, and an abyss with no bottom."))
             feature(pal, icon: AnyView(HStack(spacing: -6) {
