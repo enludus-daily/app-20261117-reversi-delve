@@ -23,27 +23,19 @@ struct PhaseOverlay: View {
 struct Veil<Content: View>: View {
     @ViewBuilder let content: Content
 
-    private var panel: some View {
-        content
-            .padding(.horizontal, 16)
-            .padding(.vertical, 20)
-            .frame(maxWidth: Theme.maxWidth)
-            .frame(maxWidth: .infinity)
-    }
-
     var body: some View {
         ZStack {
             Color.black.opacity(0.88).ignoresSafeArea()
-            // 入るなら上下の真ん中、入らなければスクロール（盤の上の見出しと重ならない）
-            ViewThatFits(in: .vertical) {
-                VStack {
-                    Spacer(minLength: 0)
-                    panel
-                    Spacer(minLength: 0)
-                }
-                ScrollView { panel }
-                    .scrollBounceBehavior(.basedOnSize)
+            ScrollView {
+                // 上を少し空けて、盤の上の見出しと重ならないようにする
+                content
+                    .padding(.horizontal, 16)
+                    .padding(.top, 72)
+                    .padding(.bottom, 20)
+                    .frame(maxWidth: Theme.maxWidth)
+                    .frame(maxWidth: .infinity)
             }
+            .scrollBounceBehavior(.basedOnSize)
         }
         .transition(.opacity)
     }
