@@ -473,23 +473,32 @@ struct ShareCard: View {
 
 struct ShareCardSheet: View {
     @Environment(AppModel.self) private var model
+    /// 共有の画像は、開いたときに 1 回だけ作る（body の中で作ると、画面が変わるたびに重い書き出しが走る）
+    @State private var image: Image?
 
     var body: some View {
         let run = model.finishedRun ?? model.run
         SheetFrame(title: tr("深さを共有", "Share your depth"), zone: run?.zone ?? .moss, closeID: "main.closeShare") {
             if let run {
-                let card = ShareCard(run: run)
-                card
+                ShareCard(run: run)
                     .scaleEffect(0.8)
                     .frame(width: 288, height: 512)
                     .clipShape(RoundedRectangle(cornerRadius: Theme.radiusL))
-                if let image = render(card) {
+                    .accessibilityElement(children: .combine)
+                if let image {
                     ShareLink(item: image, preview: SharePreview(tr("迷宮リバーシ", "Reversi Delve"), image: image)) {
                         Label(tr("画像を共有", "Share image"), systemImage: "square.and.arrow.up")
                     }
                     .buttonStyle(CarvedButtonStyle(palette: ZonePalette.of(run.zone), prominent: true))
+                } else {
+                    ProgressView().tint(Theme.gold).frame(minHeight: 52)
                 }
             }
+        }
+        .task {
+            try? await Task.sleep(for: .milliseconds(300))
+            guard image == nil, let run else { return }
+            image = render(ShareCard(run: run))
         }
     }
 
