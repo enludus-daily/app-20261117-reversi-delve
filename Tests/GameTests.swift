@@ -169,6 +169,24 @@ struct DungeonTests {
         }
     }
 
+    @Test func handMadeRoomsAreFairAndUsedOnEvenFloors() {
+        #expect(Room.all.count == 12)
+        for room in Room.all {
+            let n = room.size
+            let m = n / 2
+            #expect(room.rows.allSatisfy { $0.count == n })
+            for h in room.cells("#") {
+                #expect(room.cells("#").contains(Pos(n - 1 - h.r, n - 1 - h.c)))
+                #expect(!(h.r >= m - 1 && h.r <= m && h.c >= m - 1 && h.c <= m))
+                #expect(!Board(size: n).isCorner(h))
+            }
+            #expect(room.cells("#").isDisjoint(with: room.cells("*")))
+        }
+        #expect(Dungeon.plan(floor: 2, seed: 8).room != nil)
+        #expect(Dungeon.plan(floor: 3, seed: 8).room == nil)
+        #expect(Dungeon.plan(floor: 8, seed: 8).size == Dungeon.plan(floor: 8, seed: 8).room?.size)
+    }
+
     @Test func deeperFloorsAreBiggerAndStricter() {
         #expect(Dungeon.plan(floor: 1, seed: 1).size == 6)
         #expect(Dungeon.plan(floor: 8, seed: 1).size == 8)

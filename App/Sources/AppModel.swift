@@ -184,7 +184,8 @@ final class AppModel {
 
     private func showFloorBanner() {
         guard let run else { return }
-        banner = Banner(text: trf("地下 %d 階", "Floor %d", run.floor), sub: run.warden.name)
+        let sub = run.plan.room.map { run.warden.name + " · " + $0.name } ?? run.warden.name
+        banner = Banner(text: trf("地下 %d 階", "Floor %d", run.floor), sub: sub)
         let id = banner?.id
         Task {
             await wait(still ? 60 : 1.6)

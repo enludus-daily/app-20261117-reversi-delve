@@ -117,9 +117,45 @@ struct FloorPlan: Codable, Sendable, Equatable {
     var careless: Double
     /// 相手の錨の石の数
     var foeAnchors: Int
+    /// 手で作った部屋の型（偶数の階。nil は種から作った盤）
+    var layout: Int? = nil
 
     var zone: Zone { Zone.of(floor: floor) }
     var warden: Warden { Warden.all[wardenID - 1] }
+    var room: Room? { layout.flatMap { Room.all.indices.contains($0) ? Room.all[$0] : nil } }
+}
+
+/// 手で作った部屋（盤の型）。"#" 穴、"*" 金のはめこみ。どれも点対称で、真ん中の 4 マスと隅は空けてある
+struct Room: Sendable {
+    let nameJa: String
+    let nameEn: String
+    let rows: [String]
+
+    var name: String { Lang.isJapanese ? nameJa : nameEn }
+    var size: Int { rows.count }
+
+    func cells(_ mark: Character) -> Set<Pos> {
+        var out = Set<Pos>()
+        for (r, row) in rows.enumerated() {
+            for (c, ch) in row.enumerated() where ch == mark { out.insert(Pos(r, c)) }
+        }
+        return out
+    }
+
+    static let all: [Room] = [
+        Room(nameJa: "四つの井戸", nameEn: "Four Wells", rows: ["......", ".#..#.", "......", "......", ".#..#.", "......"]),
+        Room(nameJa: "金の十字", nameEn: "Golden Cross", rows: ["..**..", "......", "*....*", "*....*", "......", "..**.."]),
+        Room(nameJa: "崩れた縁", nameEn: "Crumbled Rim", rows: [".#..#.", "#....#", "......", "......", "#....#", ".#..#."]),
+        Room(nameJa: "宝の回廊", nameEn: "Treasure Hall", rows: ["*....*", "......", "#....#", "#....#", "......", "*....*"]),
+        Room(nameJa: "斜めの裂け目", nameEn: "Diagonal Rift", rows: ["......", ".#..*.", "......", "......", ".*..#.", "......"]),
+        Room(nameJa: "鏡の間", nameEn: "Hall of Mirrors", rows: ["*....*", ".#..#.", "......", "......", ".#..#.", "*....*"]),
+        Room(nameJa: "柱の間", nameEn: "Pillar Hall", rows: ["........", ".#....#.", "........", "..*..*..", "..*..*..", "........", ".#....#.", "........"]),
+        Room(nameJa: "崩れた城壁", nameEn: "Broken Ramparts", rows: ["........", "..#..#..", ".#....#.", "........", "........", ".#....#.", "..#..#..", "........"]),
+        Room(nameJa: "金の鉱床", nameEn: "Gold Lode", rows: ["*......*", "........", "..#..#..", "........", "........", "..#..#..", "........", "*......*"]),
+        Room(nameJa: "四つ辻", nameEn: "Crossroads", rows: ["...##...", "........", "........", "#......#", "#......#", "........", "........", "...##..."]),
+        Room(nameJa: "星座", nameEn: "Constellation", rows: ["........", ".*....*.", "...#....", "........", "........", "....#...", ".*....*.", "........"]),
+        Room(nameJa: "溶岩の溝", nameEn: "Lava Trench", rows: ["........", "........", "##....##", "........", "........", "##....##", "........", "........"]),
+    ]
 }
 
 enum Dungeon {
@@ -187,6 +223,28 @@ enum Dungeon {
             for q in mirrored(p, four: !fourFold) where !holes.contains(q) { gilded.insert(q) }
         }
         let wardenID = min(floor, Warden.all.count)
+        // 偶数の階は、手で作った部屋の型から選ぶ
+        if floor % 2 == 0 {
+            let rooms = Room.all.indices.filter { Room.all[$0].size == n }
+            let index = rooms[Int(rng.next() % UInt64(rooms.count))]
+            let room = Room.all[index]
+            var roomHoles = room.cells("#")
+            if relics.contains(.pickaxe) {
+                // 点対称の組ごとに、半分の組を埋める
+                let pairs = roomHoles.filter { $0 < Pos(n - 1 - $0.r, n - 1 - $0.c) }.sorted()
+                for (i, p) in pairs.enumerated() where i % 2 == 0 {
+                    roomHoles.remove(p)
+                    roomHoles.remove(Pos(n - 1 - p.r, n - 1 - p.c))
+                }
+            }
+            var roomGilded = room.cells("*")
+            if relics.contains(.goldVein), let extra = rest.first(where: { !roomHoles.contains($0) && !roomGilded.contains($0) }) {
+                roomGilded.insert(extra)
+                roomGilded.insert(Pos(n - 1 - extra.r, n - 1 - extra.c))
+            }
+            return FloorPlan(floor: floor, size: n, holes: roomHoles, gilded: roomGilded.subtracting(roomHoles), wardenID: wardenID,
+                             careless: s.careless, foeAnchors: s.anchors, layout: index)
+        }
         return FloorPlan(floor: floor, size: n, holes: holes, gilded: gilded, wardenID: wardenID, careless: s.careless, foeAnchors: s.anchors)
     }
 
